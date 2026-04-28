@@ -32,8 +32,9 @@ function AddPost() {
         );
       }
       await res.json();
+      titleRef.current.value = "";
+      contentRef.current.value = "";
       setSendSeccess("Post added successfully");
-      return false;
     } catch (err) {
       console.log(err);
     }
