@@ -5,7 +5,7 @@ const LastPosts = ({ ...post }) => {
     try {
       const res = await sendHttpRequest(
         "DELETE",
-        `http://localhost:3000/posts/:${postId}`,
+        `http://localhost:3000/posts/${postId}`,
       );
       if (!res.ok) {
         throw new Error(res.statusText);
